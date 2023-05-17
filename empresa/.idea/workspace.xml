@@ -5,38 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="697beb74-98f5-44ff-9675-55d97836de90" name="Changes" comment="fix db">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/ConexionDB.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/Constantes.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/emociones/Emociones.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/emociones/EmocionesDAO.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/emociones/EmocionesDAOImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/empleado/Empleado.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/empleado/EmpleadoDAO.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/empleado/EmpleadoDAOImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/equipo/Equipo.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/equipo/EquipoDAO.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/equipo/EquipoDAOImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/test/Test.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/test/TestDAO.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/test/TestDAOImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/testEquipo/testEquipo.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/testEquipo/testEquipoDAO.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/testEquipo/testEquipoDAOImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/testEstadoAnimico/testEstadoAnimico.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/testEstadoAnimico/testEstadoAnimicoDAO.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/testEstadoAnimico/testEstadoAnimicoDAOImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/testLider/testLider.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/testLider/testLiderDAO.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/testLider/testLiderDAOImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/service/Empleados.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/empresa/signup-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/singupController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/HelloApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/HelloApplication.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/loginController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/loginController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/empresa/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/empresa/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/empresa/signup-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/empresa/signup-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +76,7 @@
       <updated>1684246676871</updated>
       <workItem from="1684246677914" duration="53000" />
       <workItem from="1684249312021" duration="1691000" />
-      <workItem from="1684262852773" duration="5074000" />
+      <workItem from="1684262852773" duration="6301000" />
     </task>
     <task id="LOCAL-00001" summary="fix db">
       <created>1684258184657</created>
@@ -114,13 +85,28 @@
       <option name="project" value="LOCAL" />
       <updated>1684258184657</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="estructura proyecto">
+      <created>1684315603488</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684315603488</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix db">
+      <created>1684315813904</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684315813904</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="estructura proyecto" />
     <MESSAGE value="fix db" />
     <option name="LAST_COMMIT_MESSAGE" value="fix db" />
   </component>
