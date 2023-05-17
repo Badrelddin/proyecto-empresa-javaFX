@@ -5,14 +5,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="697beb74-98f5-44ff-9675-55d97836de90" name="Changes" comment="fix db">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/ConexionDB.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/Constantes.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/emociones/Emociones.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/emociones/EmocionesDAO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/emociones/EmocionesDAOImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/empleado/Empleado.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/empleado/EmpleadoDAO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/empleado/EmpleadoDAOImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/equipo/Equipo.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/equipo/EquipoDAO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/equipo/EquipoDAOImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/test/Test.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/test/TestDAO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/test/TestDAOImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/testEquipo/testEquipo.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/testEquipo/testEquipoDAO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/testEquipo/testEquipoDAOImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/testEstadoAnimico/testEstadoAnimico.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/testEstadoAnimico/testEstadoAnimicoDAO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/testEstadoAnimico/testEstadoAnimicoDAOImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/testLider/testLider.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/testLider/testLiderDAO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/testLider/testLiderDAOImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/service/Empleados.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/empresa/signup-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/HelloController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/loginController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/HelloApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/HelloApplication.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/loginController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/loginController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/empresa/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/empresa/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Interface" />
+        <option value="FxmlFile" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -34,19 +72,29 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/win11/Escritorio/mysql-connector-j-8.0.32/mysql-connector-j-8.0.32.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="model" />
+      <recent name="model.testEquipo" />
+      <recent name="model.equipo" />
+      <recent name="model.empleado" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -57,6 +105,7 @@
       <updated>1684246676871</updated>
       <workItem from="1684246677914" duration="53000" />
       <workItem from="1684249312021" duration="1691000" />
+      <workItem from="1684262852773" duration="5074000" />
     </task>
     <task id="LOCAL-00001" summary="fix db">
       <created>1684258184657</created>

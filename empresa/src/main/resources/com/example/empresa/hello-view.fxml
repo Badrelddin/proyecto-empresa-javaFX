@@ -1,16 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.empresa.loginController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
-
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="409.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.empresa.loginController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#03030332" height="329.0" layoutX="115.0" layoutY="40.0" stroke="BLACK" strokeType="INSIDE" width="390.0" />
+      <Label layoutX="213.0" layoutY="55.0" text="BadrWeb Corp.">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="185.0" layoutY="141.0" text="E-mail" />
+      <TextField fx:id="TFemail" layoutX="186.0" layoutY="168.0" prefHeight="37.0" prefWidth="249.0">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <Label layoutX="186.0" layoutY="222.0" text="Contraseña" />
+      <Hyperlink layoutX="160.0" layoutY="313.0" text="Registrarse">
+         <font>
+            <Font size="15.0" />
+         </font></Hyperlink>
+      <Button layoutX="345.0" layoutY="309.0" mnemonicParsing="false" onAction="#login" prefHeight="37.0" prefWidth="117.0" text="Iniciar sesión">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <PasswordField fx:id="TFpassword" layoutX="185.0" layoutY="252.0" prefHeight="37.0" prefWidth="249.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </PasswordField>
+   </children>
+</Pane>
