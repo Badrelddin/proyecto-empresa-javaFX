@@ -2,7 +2,7 @@ package service
 
 import model.empleado.EmpleadoDAOImpl
 
-class Empleados {
+class EmpleadosServicio {
 
 
 
