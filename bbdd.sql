@@ -10,7 +10,9 @@ create table empleado(
     nombre varchar(25) , 
     primer_apellido varchar(25), 
     segundo_apellido varchar(25),
-    es_jefe bool,
+    email varchar(75),
+    password varchar(50),
+    es_jefe bool default false,
     id_equipo int,
     foreign key (id_equipo) references equipo(id) on delete cascade, 
     fecha_de_nacimiento date
