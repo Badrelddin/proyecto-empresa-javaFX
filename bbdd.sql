@@ -1,4 +1,4 @@
-
+use emociones_db;
 create table equipo(
 	id int auto_increment primary key, 
     nombre varchar(25),
@@ -8,14 +8,13 @@ create table equipo(
 create table empleado(
 	id int auto_increment  primary key, 
     nombre varchar(25) , 
-    primer_apellido varchar(25), 
-    segundo_apellido varchar(25),
+    apellidos varchar(50),
     email varchar(75),
     password varchar(50),
     es_jefe bool default false,
-    id_equipo int,
+    id_equipo int default 1,
     foreign key (id_equipo) references equipo(id) on delete cascade, 
-    fecha_de_nacimiento date
+    fecha_nacimiento date
 );
 
 create table test(

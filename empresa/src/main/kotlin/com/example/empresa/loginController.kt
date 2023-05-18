@@ -1,15 +1,8 @@
 package com.example.empresa
 
 import javafx.fxml.FXML
-import javafx.fxml.FXMLLoader
-import javafx.scene.Parent
-import javafx.scene.Scene
-import javafx.scene.control.Alert
-import javafx.scene.control.ButtonType
 import javafx.scene.control.Label
 import javafx.scene.control.TextField
-import javafx.stage.Modality
-import javafx.stage.Stage
 import service.EmpleadosServicio
 
 class loginController {
@@ -36,22 +29,36 @@ class loginController {
                     var constantesController = ConstantesController()
                     constantesController.view("admin-view.fxml")
 
-                }catch (e:Exception){
+                } catch (e: Exception) {
                     var constantesController = ConstantesController()
-                    constantesController.alert()
+                    constantesController.alertError(e.toString())
                 }
             } else {
                 try {
                     var constantesController = ConstantesController()
-                    var emple = EempleadosServicio.
-                    constantesController.empleado()
+                    var emple = EempleadosServicio.searchEmpleado(email)
+                    if (emple != null) {
+                        constantesController.empleado(emple)
+                    }
 
-                }catch (e:Exception){
+                } catch (e: Exception) {
                     var constantesController = ConstantesController()
-                    constantesController.alert()
+                    constantesController.alertError(e.toString())
                 }
             }
         } else
             lbError.text = "Inicio de sesión incorrecto"
+    }
+
+    @FXML
+    private fun signup() {
+        var constantesController = ConstantesController()
+
+        try {
+            constantesController.view("signup-view.fxml")
+        } catch (e: Exception) {
+            constantesController.alertError(e.toString())
+        }
+
     }
 }

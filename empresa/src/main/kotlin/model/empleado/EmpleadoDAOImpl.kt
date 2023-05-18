@@ -3,16 +3,17 @@ package model.empleado
 import model.ConexionDB
 import model.Constantes
 import java.sql.PreparedStatement
+import java.sql.SQLException
 
-class EmpleadoDAOImpl:EmpleadoDAO {
+class EmpleadoDAOImpl : EmpleadoDAO {
     var conexion = ConexionDB(Constantes.url, Constantes.user, Constantes.password)
 
     override fun login(email: String, password: String): Boolean {
         try {
 
-        }catch (e:Exception){
+        } catch (e: Exception) {
             println(e)
-        }finally {
+        } finally {
             return true
         }
     }
@@ -20,36 +21,59 @@ class EmpleadoDAOImpl:EmpleadoDAO {
     override fun esJefe(email: String): Boolean {
         try {
 
-        }catch (e:Exception){
+        } catch (e: Exception) {
             println(e)
-        }finally {
+        } finally {
             return true
         }
     }
 
-    override fun getEmpleado(email: String): Empleado {
+    override fun getEmpleadoByEmail(email: String): Empleado? {
         conexion.conectar()
-        var result:Int?=null
-        var ps: PreparedStatement? = null
-        var correcto:Int = 1
+        val query = "SELECT * FROM empleado WHERE email = ?"
+        val ps = conexion.getPreparedStatement(query)
 
-        val query = "select * from empleados where empleado = ?;"
-        ps = conexion.getPreparedStatement(query)
+        var Empleado: Empleado? = null
         try {
-            ps?.setInt(1, a.id)
-            ps?.setString(2, a.nombre)
-            ps?.setInt(3, a.edad)
-            val utilDate = a.fechaNacimiento
-            val sqlDate = java.sql.Date.valueOf(utilDate)
-            ps?.setDate(4, sqlDate)
-            ps?.setBoolean(5, a.matriculado)
-            result = ps?.executeUpdate()
-        }catch (e:Exception){
-            println("no Se puede insertar ${a.nombre}")
-            correcto = 0
-        }
-        ps?.close()
-        conexion.desconectar()
+            ps?.setString(1, email)
+            val rs = ps?.executeQuery()
+            if (rs?.next() == true) {
+                Empleado =
+                    Empleado(rs.getString("nombre"), rs.getString("apellidos"), rs.getString("email"), rs.getString("fecha_nacimiento"), rs.getString("password"))
+            }
 
+        } catch (e: Exception) {
+
+        } finally {
+            ps?.close()
+            conexion.desconectar()
+            return Empleado
+        }
+
+    }
+
+    override fun insertEmpleado(Empleado: Empleado): Boolean {
+        var result:Int?=null
+        var ps:PreparedStatement?=null
+
+        try {
+            conexion.conectar()
+            val query = "INSERT INTO empleado (nombre, apellido, email, password, fecha_nacimiento) VALUES (?, ?, ?, ?, ?)"
+            ps = conexion.getPreparedStatement(query)
+
+            ps?.setString(1, Empleado.nombre)
+            ps?.setString(2, Empleado.apellidos)
+            ps?.setString(3, Empleado.email)
+            ps?.setString(4, Empleado.password)
+            ps?.setString(5, Empleado.fecha_nacimiento)
+            result = ps?.executeUpdate()
+
+        }catch (e: SQLException){
+            println(e.message)
+        }finally {
+            ps?.close()
+            conexion.desconectar()
+        }
+        return result == 1
     }
 }

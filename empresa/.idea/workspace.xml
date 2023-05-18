@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="697beb74-98f5-44ff-9675-55d97836de90" name="Changes" comment="implement funs" />
+    <list default="true" id="697beb74-98f5-44ff-9675-55d97836de90" name="Changes" comment="design singup view">
+      <change beforePath="$PROJECT_DIR$/../bbdd.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../bbdd.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/empleadoController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/empleadoController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/loginController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/loginController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/singupController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/singupController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/Constantes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/Constantes.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/empleado/Empleado.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/empleado/Empleado.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/empleado/EmpleadoDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/empleado/EmpleadoDAO.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/empleado/EmpleadoDAOImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/empleado/EmpleadoDAOImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/service/EmpleadosServicio.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/service/EmpleadosServicio.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/empresa/admin-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/empresa/admin-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/empresa/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/empresa/hello-view.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +52,6 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
@@ -53,6 +65,11 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -75,7 +92,7 @@
       <workItem from="1684249312021" duration="1691000" />
       <workItem from="1684262852773" duration="6301000" />
       <workItem from="1684320418677" duration="7500000" />
-      <workItem from="1684352529171" duration="363000" />
+      <workItem from="1684352529171" duration="6226000" />
     </task>
     <task id="LOCAL-00001" summary="fix db">
       <created>1684258184657</created>
@@ -112,7 +129,28 @@
       <option name="project" value="LOCAL" />
       <updated>1684352601762</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="implement funs">
+      <created>1684356945406</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1684356945406</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix alerts">
+      <created>1684405903682</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1684405903682</updated>
+    </task>
+    <task id="LOCAL-00008" summary="design singup view">
+      <created>1684405936000</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1684405936000</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +172,8 @@
     <MESSAGE value="fix db" />
     <MESSAGE value="rename service" />
     <MESSAGE value="implement funs" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement funs" />
+    <MESSAGE value="fix alerts" />
+    <MESSAGE value="design singup view" />
+    <option name="LAST_COMMIT_MESSAGE" value="design singup view" />
   </component>
 </project>

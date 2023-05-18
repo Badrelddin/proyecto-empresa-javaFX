@@ -4,30 +4,31 @@
 <?import javafx.scene.layout.*?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.empresa.adminController">
-   <children>
-      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
-        <menus>
-          <Menu mnemonicParsing="false" text="Test">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Anímico" />
-                  <MenuItem mnemonicParsing="false" text="Equipo" />
-                  <MenuItem mnemonicParsing="false" text="Jefe" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Cambiar">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Nombre" />
-                  <MenuItem mnemonicParsing="false" text="Apellidos" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Mostrar">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Empleados" />
-                  <MenuItem mnemonicParsing="false" text="Equipos" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
-   </children>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.empresa.adminController">
+    <children>
+        <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="Test">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Anímico"/>
+                        <MenuItem mnemonicParsing="false" text="Equipo"/>
+                        <MenuItem mnemonicParsing="false" text="Jefe"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Cambiar">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Nombre"/>
+                        <MenuItem mnemonicParsing="false" text="Apellidos"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Mostrar">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Empleados"/>
+                        <MenuItem mnemonicParsing="false" text="Equipos"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </children>
 </AnchorPane>

@@ -21,8 +21,7 @@ class empleadoController {
     fun inicializar(emple:Empleado){
         empleado = emple
         lbNombre.text = empleado.nombre
-        lbpapellido.text = empleado.primer_apellido
-        lbsapellido.text = empleado.segundo_apellido
+        lbpapellido.text = empleado.apellidos
 
     }
 
