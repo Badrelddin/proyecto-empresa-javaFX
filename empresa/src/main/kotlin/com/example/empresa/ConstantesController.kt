@@ -12,9 +12,11 @@ import model.empleado.Empleado
 class ConstantesController {
     constructor()
 
-    fun alert(){
+    fun alertError(error: String){
         val alert = Alert(Alert.AlertType.CONFIRMATION)
         alert.alertType = Alert.AlertType.ERROR // Error
+
+        alert.contentText = error
 
         val buttonTypeOne = ButtonType("One")
         val buttonTypeTwo = ButtonType("Two")
@@ -30,6 +32,20 @@ class ConstantesController {
         } else {
             println("Dialog canceled")
         }
+
+    }
+
+    fun alertSuccess(error: String){
+        val alert = Alert(Alert.AlertType.CONFIRMATION)
+        alert.alertType = Alert.AlertType.INFORMATION // Error
+
+        alert.contentText = error
+
+        val buttonTypeClose = ButtonType.CLOSE
+        alert.buttonTypes.setAll(buttonTypeClose)
+
+        // Mostrando la alerta y procesando la respuesta
+        val result = alert.showAndWait()
 
     }
 
