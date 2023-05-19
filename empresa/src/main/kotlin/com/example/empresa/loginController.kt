@@ -4,6 +4,7 @@ import javafx.fxml.FXML
 import javafx.scene.control.Label
 import javafx.scene.control.TextField
 import service.EmpleadosServicio
+import service.UsuariosServicio
 
 class loginController {
     @FXML
@@ -18,13 +19,14 @@ class loginController {
     @FXML
 
     private fun login() {
-        var EempleadosServicio = EmpleadosServicio()
+        var EmpleadosServicio = EmpleadosServicio()
+        var UserServicio = UsuariosServicio()
 
         var email = TFemail.text
         var password = TFpassword.text
 
-        if (EempleadosServicio.login(email, password)) {
-            if (EempleadosServicio.esJefe(email)) {
+        if (UserServicio.login(email, password)) {
+            if (EmpleadosServicio.esJefe(email)) {
                 try {
                     var constantesController = ConstantesController()
                     constantesController.view("admin-view.fxml")
@@ -36,7 +38,7 @@ class loginController {
             } else {
                 try {
                     var constantesController = ConstantesController()
-                    var emple = EempleadosServicio.searchEmpleado(email)
+                    var emple = EmpleadosServicio.searchEmpleado(email)
                     if (emple != null) {
                         constantesController.empleado(emple)
                     }

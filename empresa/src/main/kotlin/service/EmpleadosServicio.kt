@@ -7,11 +7,9 @@ import model.user.UserDAOImpl
 class EmpleadosServicio {
     constructor()
     var emple = EmpleadoDAOImpl()
-    var usu = UserDAOImpl()
 
-    fun login(email:String, password:String):Boolean{
-        return usu.login(email, password)
-    }
+
+
 
     fun esJefe(email:String):Boolean{
         return emple.esJefe(email)
