@@ -47,6 +47,7 @@ class loginController {
                 }
             }
         } else
+            lbError.isVisible = true
             lbError.text = "Inicio de sesión incorrecto"
     }
 

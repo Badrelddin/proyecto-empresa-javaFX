@@ -37,7 +37,7 @@ class ConstantesController {
 
     fun alertSuccess(error: String){
         val alert = Alert(Alert.AlertType.CONFIRMATION)
-        alert.alertType = Alert.AlertType.INFORMATION // Error
+      //  alert.alertType = Alert.AlertType.INFORMATION // Error
 
         alert.contentText = error
 

@@ -2,13 +2,15 @@ package service
 
 import model.empleado.Empleado
 import model.empleado.EmpleadoDAOImpl
+import model.user.UserDAOImpl
 
 class EmpleadosServicio {
     constructor()
     var emple = EmpleadoDAOImpl()
+    var usu = UserDAOImpl()
 
     fun login(email:String, password:String):Boolean{
-        return emple.login(email, password)
+        return usu.login(email, password)
     }
 
     fun esJefe(email:String):Boolean{

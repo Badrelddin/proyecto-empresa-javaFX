@@ -32,5 +32,10 @@
             <Font size="15.0" />
          </font>
       </PasswordField>
+      <Label fx:id="lbError" layoutX="155.0" layoutY="100.0" text="Bienvenido al sistema de autenticado moderno" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
    </children>
 </Pane>
