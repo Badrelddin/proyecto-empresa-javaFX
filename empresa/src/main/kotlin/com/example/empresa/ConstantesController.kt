@@ -66,7 +66,6 @@ class ConstantesController {
         val stage = Stage()
         stage.scene = Scene(root)
         stage.initModality(Modality.APPLICATION_MODAL)
-        //stage.show()
         stage.showAndWait()
     }
 
@@ -80,7 +79,9 @@ class ConstantesController {
         val stage = Stage()
         stage.scene = Scene(root)
         stage.title = "Panel de administración"
+        stage.initModality(Modality.APPLICATION_MODAL)
         stage.showAndWait()
+
     }
     fun viewTraspasoAdminEmpleado(View:String, Empleado:Empleado){
         val loader = FXMLLoader(javaClass.getResource(View))
