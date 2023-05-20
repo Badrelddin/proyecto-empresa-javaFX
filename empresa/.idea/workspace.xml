@@ -4,27 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="697beb74-98f5-44ff-9675-55d97836de90" name="Changes" comment="design singup view">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/AdminEmpleadosController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/service/EquipoServicio.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/empresa/admin-empleados-view.fxml" afterDir="false" />
+    <list default="true" id="697beb74-98f5-44ff-9675-55d97836de90" name="Changes" comment="add function delete for admin-employ view">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/ConstantesController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/ConstantesController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/adminController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/adminController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/empleadoController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/empleadoController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/loginController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/loginController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/singupController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/singupController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/empleado/Empleado.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/empleado/Empleado.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/empleado/EmpleadoDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/empleado/EmpleadoDAO.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/empleado/EmpleadoDAOImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/empleado/EmpleadoDAOImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/equipo/Equipo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/equipo/Equipo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/equipo/EquipoDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/equipo/EquipoDAO.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/equipo/EquipoDAOImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/equipo/EquipoDAOImpl.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/service/EmpleadosServicio.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/service/EmpleadosServicio.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/empresa/admin-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/empresa/admin-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/empresa/empleado-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/empresa/empleado-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/empresa/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/empresa/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/empresa/signup-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/empresa/signup-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +86,7 @@
       <workItem from="1684262852773" duration="6301000" />
       <workItem from="1684320418677" duration="7500000" />
       <workItem from="1684352529171" duration="6226000" />
-      <workItem from="1684601702054" duration="6586000" />
+      <workItem from="1684601702054" duration="9290000" />
     </task>
     <task id="LOCAL-00001" summary="fix db">
       <created>1684258184657</created>
@@ -159,7 +144,21 @@
       <option name="project" value="LOCAL" />
       <updated>1684405936000</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fix a lot of functions">
+      <created>1684609076107</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1684609076107</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add function delete for admin-employ view">
+      <created>1684612449055</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1684612449055</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,7 +182,9 @@
     <MESSAGE value="implement funs" />
     <MESSAGE value="fix alerts" />
     <MESSAGE value="design singup view" />
-    <option name="LAST_COMMIT_MESSAGE" value="design singup view" />
+    <MESSAGE value="fix a lot of functions" />
+    <MESSAGE value="add function delete for admin-employ view" />
+    <option name="LAST_COMMIT_MESSAGE" value="add function delete for admin-employ view" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
