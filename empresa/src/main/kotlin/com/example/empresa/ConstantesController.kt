@@ -12,6 +12,25 @@ import model.empleado.Empleado
 class ConstantesController {
     constructor()
 
+    fun alertPergunta(Message:String):Boolean{
+        val alert = Alert(Alert.AlertType.WARNING)
+
+        alert.contentText = Message
+
+        val buttonTypeConfirm = ButtonType.YES
+        val buttonTypeCancel = ButtonType.NO
+        alert.buttonTypes.setAll(buttonTypeConfirm,buttonTypeCancel)
+
+        val result = alert.showAndWait()
+        var rtnPregunta = false
+        if (result.get() == buttonTypeConfirm) {
+            rtnPregunta = true
+        } else if (result.get() == buttonTypeCancel) {
+            rtnPregunta = false
+        }
+        return rtnPregunta
+    }
+
     fun alertError(error: String){
         val alert = Alert(Alert.AlertType.CONFIRMATION)
         alert.alertType = Alert.AlertType.ERROR // Error
