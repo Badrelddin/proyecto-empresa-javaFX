@@ -143,7 +143,6 @@ class EmpleadoDAOImpl : EmpleadoDAO {
             val query =
                 "INSERT INTO empleado (nombre, apellidos, email, password, fecha_nacimiento, es_jefe) VALUES (?, ?, ?, ?, ?, ?)"
             ps = conexion.getPreparedStatement(query)
-            println(Empleado.password)
             ps?.setString(1, Empleado.nombre)
             ps?.setString(2, Empleado.apellidos)
             ps?.setString(3, Empleado.email)
@@ -156,6 +155,28 @@ class EmpleadoDAOImpl : EmpleadoDAO {
             ps?.setDate(5, sqlDate)
 
             ps?.setBoolean(6, Empleado.es_jefe)
+            result = ps?.executeUpdate()
+
+        } catch (e: SQLException) {
+            println(e.message)
+        } finally {
+            ps?.close()
+            conexion.desconectar()
+        }
+        return result == 1
+    }
+
+    override fun deleteEmpleado(id: Int): Boolean {
+        var result: Int? = null
+        var ps: PreparedStatement? = null
+
+        try {
+            conexion.conectar()
+            val query =
+                "DELETE from EMPLEADO WHERE id = ?"
+            ps = conexion.getPreparedStatement(query)
+
+            ps?.setInt(1, id)
             result = ps?.executeUpdate()
 
         } catch (e: SQLException) {

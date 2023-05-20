@@ -12,5 +12,7 @@ interface EmpleadoDAO {
 
     fun insertEmpleado(Empleado:Empleado):Boolean
 
+    fun deleteEmpleado(id:Int):Boolean
+
 
 }
