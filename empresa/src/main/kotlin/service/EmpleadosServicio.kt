@@ -8,6 +8,10 @@ class EmpleadosServicio {
     constructor()
     var emple = EmpleadoDAOImpl()
 
+    fun eliminar(Id:Int):Boolean{
+        return emple.deleteEmpleado(Id)
+    }
+
     fun selecionarEmpleados():List<Empleado>{
         return emple.getEmpleados()
     }
