@@ -18,20 +18,11 @@ class ConstantesController {
 
         alert.contentText = error
 
-        val buttonTypeOne = ButtonType("One")
-        val buttonTypeTwo = ButtonType("Two")
-        val buttonTypeCancel = ButtonType.CANCEL
-        alert.buttonTypes.setAll(buttonTypeOne, buttonTypeTwo, buttonTypeCancel)
+        val buttonTypeCancel = ButtonType.CLOSE
+        alert.buttonTypes.setAll(buttonTypeCancel)
 
         // Mostrando la alerta y procesando la respuesta
         val result = alert.showAndWait()
-        if (result.get() == buttonTypeOne) {
-            println("Button One clicked")
-        } else if (result.get() == buttonTypeTwo) {
-            println("Button Two clicked")
-        } else {
-            println("Dialog canceled")
-        }
 
     }
 
@@ -60,18 +51,43 @@ class ConstantesController {
         stage.showAndWait()
     }
 
-    fun empleado(emple:Empleado){
-        val fxmlLoader = FXMLLoader(empleadoController::class.java.getResource("empleado-view.fxml"))
+    fun viewTraspasoAdmin(View:String, Empleado:Empleado){
+        val loader = FXMLLoader(javaClass.getResource(View))
+        val root = loader.load<Parent>()
+        val detailController = loader.getController<adminController>()
 
-        val scene = Scene(fxmlLoader.load(), 320.0, 400.0)
-        val detailController = fxmlLoader.getController<empleadoController>()
-        detailController.inicializar(emple)
+        detailController.inicializar(Empleado)
 
-        var stage = Stage()
-        stage.title = "Ver Datos"
-        stage.initModality(Modality.APPLICATION_MODAL)
-        stage.scene = scene
+        val stage = Stage()
+        stage.scene = Scene(root)
+
         stage.showAndWait()
     }
+    fun viewTraspasoAdminEmpleado(View:String, Empleado:Empleado){
+        val loader = FXMLLoader(javaClass.getResource(View))
+        val root = loader.load<Parent>()
+        val detailController = loader.getController<AdminEmpleadosController>()
+
+        detailController.inicializar(Empleado)
+
+        val stage = Stage()
+        stage.scene = Scene(root)
+
+        stage.showAndWait()
+    }
+
+    fun viewTraspasoEmpleado(View:String, Empleado:Empleado){
+        val loader = FXMLLoader(javaClass.getResource(View))
+        val root = loader.load<Parent>()
+        val detailController = loader.getController<empleadoController>()
+
+        detailController.inicializar(Empleado)
+
+        val stage = Stage()
+        stage.scene = Scene(root)
+
+        stage.showAndWait()
+    }
+
 
 }

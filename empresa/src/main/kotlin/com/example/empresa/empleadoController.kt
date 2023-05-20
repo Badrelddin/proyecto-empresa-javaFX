@@ -8,23 +8,21 @@ class empleadoController {
 
     var empleado = Empleado()
 
-
     @FXML
     private lateinit var lbNombre: Label
 
     @FXML
-    private lateinit var lbpapellido: Label
+    private lateinit var lbApellidos: Label
 
     @FXML
-    private lateinit var lbsapellido: Label
+    private lateinit var lbNacimiento: Label
 
     fun inicializar(emple:Empleado){
         empleado = emple
         lbNombre.text = empleado.nombre
-        lbpapellido.text = empleado.apellidos
-
+        lbApellidos.text = empleado.apellidos
+        lbNacimiento.text = empleado.fecha_nacimiento
     }
-
 
 
 }

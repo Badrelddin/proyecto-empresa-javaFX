@@ -1,19 +1,24 @@
 package com.example.empresa
 
+import javafx.collections.FXCollections
+import javafx.collections.ObservableList
 import javafx.fxml.FXML
-import javafx.fxml.FXMLLoader
-import javafx.scene.Parent
-import javafx.scene.Scene
+import javafx.fxml.Initializable
+import javafx.scene.control.CheckBox
+import javafx.scene.control.ComboBox
 import javafx.scene.control.DatePicker
+import javafx.scene.control.RadioButton
 import javafx.scene.control.TextField
-import javafx.stage.Modality
-import javafx.stage.Stage
+import javafx.scene.control.ToggleGroup
 import model.empleado.Empleado
+import model.equipo.Equipo
 import service.EmpleadosServicio
+import service.EquipoServicio
+import java.net.URL
 import java.text.SimpleDateFormat
-import javafx.application.Platform
+import java.util.*
 
-class singupController {
+class singupController:Initializable {
 
     @FXML
     private lateinit var txApellidos: TextField
@@ -33,6 +38,14 @@ class singupController {
     @FXML
     private lateinit var datapicker: DatePicker
 
+    @FXML
+    private lateinit var radioNo: RadioButton
+
+    @FXML
+    private lateinit var radioSi: RadioButton
+
+    @FXML
+    private lateinit var cbEquipo: ComboBox<Equipo>
 
     @FXML
     private fun signup() {
@@ -41,23 +54,49 @@ class singupController {
 
         try {
             if (txPw.text == txtConfPw.text) {
-                val selectedDate = datapicker.value
-                val format = SimpleDateFormat("yyyy-MM-dd")
-                val dateString = format.format(java.sql.Date.valueOf(selectedDate))
-                var empleado = Empleado(txNombre.text, txApellidos.text,dateString)
-                if (empleadosServicio.darAlta(empleado)) {
-                    constantesController.alertSuccess("Registrado correctamente")
 
+                var cash_jefe = false
+                if (radioNo.isSelected) cash_jefe = true
+                println(txPw.text)
+
+                val selectedDate = datapicker.value
+
+                if (selectedDate != null) {
+
+                    var empleado = Empleado(
+                        txNombre.text,
+                        txApellidos.text,
+                        exEmail.text,
+                        txPw.text,
+                        datapicker.value.toString(),
+                        cash_jefe
+                    )
+                    if (empleadosServicio.darAlta(empleado)) {
+                        constantesController.alertSuccess("Registrado correctamente")
+                    } else {
+                        constantesController.alertError("No se ha podido dar de alta")
+                    }
+                } else {
+                    constantesController.alertError("No se ha seleccionado ninguna fecha.")
                 }
-                else{
-                    constantesController.alertError("No se ha podido dar de alta")
-                }
-            }else{
+            } else {
                 constantesController.alertError("La contraseña no coincide")
             }
 
         } catch (e: Exception) {
             constantesController.alertError(e.toString())
+            println(e.toString())
         }
+
+    }
+
+    @FXML
+    private lateinit var obsLista: ObservableList<Equipo>
+    override fun initialize(location: URL?, resources: ResourceBundle?) {
+
+        var equipo = EquipoServicio()
+        var lista = equipo.verEquipo()
+        obsLista = FXCollections.observableArrayList<Equipo>(lista)
+        cbEquipo.items = obsLista
     }
 }

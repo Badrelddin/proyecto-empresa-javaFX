@@ -1,10 +1,13 @@
 package com.example.empresa
 
 import javafx.fxml.FXML
+import javafx.fxml.FXMLLoader
+import javafx.scene.Parent
+import javafx.scene.Scene
 import javafx.scene.control.Label
 import javafx.scene.control.TextField
+import javafx.stage.Stage
 import service.EmpleadosServicio
-import service.UsuariosServicio
 
 class loginController {
     @FXML
@@ -19,35 +22,29 @@ class loginController {
     @FXML
 
     private fun login() {
-        var EmpleadosServicio = EmpleadosServicio()
-        var UserServicio = UsuariosServicio()
-
+        var EempleadosServicio = EmpleadosServicio()
+        var constantesController = ConstantesController()
         var email = TFemail.text
         var password = TFpassword.text
 
-        if (UserServicio.login(email, password)) {
-            if (EmpleadosServicio.esJefe(email)) {
+        if (EempleadosServicio.login(email, password)) {
+            var empleado = EempleadosServicio.searchEmpleado(email)!!
+            if (EempleadosServicio.esJefe(email)) {
                 try {
-                    var constantesController = ConstantesController()
-                    constantesController.view("admin-view.fxml")
+                    constantesController.viewTraspasoAdmin("admin-view.fxml", empleado)
 
                 } catch (e: Exception) {
-                    var constantesController = ConstantesController()
                     constantesController.alertError(e.toString())
                 }
             } else {
                 try {
-                    var constantesController = ConstantesController()
-                    var emple = EmpleadosServicio.searchEmpleado(email)
-                    if (emple != null) {
-                        constantesController.empleado(emple)
-                    }
+                    constantesController.viewTraspasoEmpleado("empleado-view.fxml", empleado)
 
                 } catch (e: Exception) {
-                    var constantesController = ConstantesController()
                     constantesController.alertError(e.toString())
                 }
             }
+
         } else
             lbError.isVisible = true
             lbError.text = "Inicio de sesión incorrecto"

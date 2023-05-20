@@ -3,37 +3,38 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.empresa.empleadoController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.empresa.empleadoController">
     <children>
         <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
             <menus>
                 <Menu mnemonicParsing="false" text="Test">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Anímico" />
-                        <MenuItem mnemonicParsing="false" text="Equipo" />
-                        <MenuItem mnemonicParsing="false" text="Jefe" />
+                        <MenuItem mnemonicParsing="false" text="Anímico"/>
+                        <MenuItem mnemonicParsing="false" text="Equipo"/>
+                        <MenuItem mnemonicParsing="false" text="Jefe"/>
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Cambiar">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Nombre" />
-                        <MenuItem mnemonicParsing="false" text="Apellidos" />
+                        <MenuItem mnemonicParsing="false" text="Nombre"/>
+                        <MenuItem mnemonicParsing="false" text="Apellidos"/>
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Mostrar">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Empleados" />
-                        <MenuItem mnemonicParsing="false" text="Equipos" />
+                        <MenuItem mnemonicParsing="false" text="Empleados"/>
+                        <MenuItem mnemonicParsing="false" text="Equipos"/>
                     </items>
                 </Menu>
             </menus>
         </MenuBar>
-      <Label layoutX="111.0" layoutY="111.0" text="Nombre" />
-      <Label layoutX="111.0" layoutY="149.0" text="Primer apellido" />
-      <Label layoutX="111.0" layoutY="192.0" text="Segundo apellido" />
-      <Label fx:id="lbNombre" layoutX="310.0" layoutY="111.0" text="Label" />
-      <Label fx:id="lbpapellidos" layoutX="310.0" layoutY="158.0" text="Label" />
-      <Label fx:id="lbsapellido" layoutX="310.0" layoutY="201.0" text="Label" />
+        <Label layoutX="111.0" layoutY="111.0" text="Nombre"/>
+        <Label layoutX="111.0" layoutY="149.0" text="Apellidos"/>
+        <Label layoutX="111.0" layoutY="192.0" text="Fecha de nacimiento"/>
+        <Label fx:id="lbNombre" layoutX="310.0" layoutY="111.0" text="Label"/>
+        <Label fx:id="lbApellidos" layoutX="310.0" layoutY="149.0" text="Label"/>
+        <Label fx:id="lbNacimiento" layoutX="310.0" layoutY="193.0" text="Label"/>
     </children>
 
 </AnchorPane>

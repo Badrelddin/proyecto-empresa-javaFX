@@ -8,8 +8,12 @@ class EmpleadosServicio {
     constructor()
     var emple = EmpleadoDAOImpl()
 
-
-
+    fun selecionarEmpleados():List<Empleado>{
+        return emple.getEmpleados()
+    }
+    fun login(email:String, password:String):Boolean{
+        return emple.login(email, password)
+    }
 
     fun esJefe(email:String):Boolean{
         return emple.esJefe(email)
