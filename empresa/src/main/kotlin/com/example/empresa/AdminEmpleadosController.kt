@@ -10,6 +10,7 @@ import javafx.fxml.Initializable
 import javafx.scene.control.Label
 import javafx.scene.control.TableColumn
 import javafx.scene.control.TableView
+import model.Constantes
 import model.empleado.Empleado
 import service.EmpleadosServicio
 import java.net.URL
@@ -72,18 +73,44 @@ class AdminEmpleadosController : Initializable {
         for (i in empleadoServicio.selecionarEmpleados()) {
             obLista.add(i)
         }
-        tbEmpleados.items = obLista //el items de la tabla es el que necesita la conversion de String --> SimpleStringProperty para poder representarlos internamente
+        tbEmpleados.items =
+            obLista //el items de la tabla es el que necesita la conversion de String --> SimpleStringProperty para poder representarlos internamente
     }
 
-    fun inicializar(emple: Empleado){
+    fun inicializar(emple: Empleado) {
         empleado = emple
         lbNombreyApellidos.text = empleado.nombre + " " + empleado.apellidos
-        for (i in empleadoServicio.selecionarEmpleados()) {
-            println(i)
+    }
+
+
+    fun btEliminar() {
+        var EmpleadosServicio = EmpleadosServicio()
+        var ConstantesController = ConstantesController()
+        try {
+
+            if (ConstantesController.alertPergunta("Va a eliminar un usuario de forma permanente,\n ¿Está usted seguro?")) {
+                val personaSeleccionada = tbEmpleados.selectionModel.selectedItem
+                if (personaSeleccionada != null) {
+                    tbEmpleados.items.remove(personaSeleccionada)
+                    if (EmpleadosServicio.eliminar(personaSeleccionada.id)) {
+                        ConstantesController.alertSuccess("Usuario eliminado correctamente")
+                    }else{
+                        ConstantesController.alertError("El usuario: ${personaSeleccionada.nombre} ${personaSeleccionada.apellidos} no ha podiso ser eliminado")
+
+                    }
+                    tbEmpleados.refresh() //actualiza la tabla, en este caso no se necesita, pero por si acaso
+                }
+
+            }
+
+        } catch (e: Exception) {
+            ConstantesController.alertError(e.toString())
         }
     }
 
+    fun btModificar() {}
 
+    fun btAlta() {}
 
 
 }
