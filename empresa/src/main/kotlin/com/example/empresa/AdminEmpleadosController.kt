@@ -108,9 +108,25 @@ class AdminEmpleadosController : Initializable {
         }
     }
 
-    fun btModificar() {}
+    fun btModificar() {
+        var constantesController = ConstantesController()
 
-    fun btAlta() {}
+        try {
+            constantesController.view("modificar-empleado-view.fxml")
+        } catch (e: Exception) {
+            constantesController.alertError(e.toString())
+        }
+    }
+
+    fun btAlta() {
+        var constantesController = ConstantesController()
+
+        try {
+            constantesController.view("signup-view.fxml")
+        } catch (e: Exception) {
+            constantesController.alertError(e.toString())
+        }
+    }
 
 
 }
