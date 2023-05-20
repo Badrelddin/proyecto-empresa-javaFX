@@ -79,7 +79,7 @@ class ConstantesController {
 
         val stage = Stage()
         stage.scene = Scene(root)
-
+        stage.title = "Panel de administración"
         stage.showAndWait()
     }
     fun viewTraspasoAdminEmpleado(View:String, Empleado:Empleado){
@@ -90,6 +90,7 @@ class ConstantesController {
         detailController.inicializar(Empleado)
 
         val stage = Stage()
+        stage.initModality(Modality.APPLICATION_MODAL)
         stage.scene = Scene(root)
 
         stage.showAndWait()
@@ -103,6 +104,7 @@ class ConstantesController {
         detailController.inicializar(Empleado)
 
         val stage = Stage()
+        stage.initModality(Modality.APPLICATION_MODAL)
         stage.scene = Scene(root)
 
         stage.showAndWait()
