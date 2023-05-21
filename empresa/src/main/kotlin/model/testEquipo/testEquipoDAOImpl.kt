@@ -18,7 +18,7 @@ class testEquipoDAOImpl:testEquipoDAO {
         try {
             conexion.conectar()
             val query =
-                "INSERT INTO testequipo (respuesta1, respuesta2, sobra) VALUES (?, ?, ?)"
+                "INSERT INTO testequipo (respuesta1, id_empleado, sobra) VALUES (?, ?, ?)"
             ps = conexion.getPreparedStatement(query)
             ps?.setString(1, datos.respuesta1)
             ps?.setString(2, datos.respuesta2)
