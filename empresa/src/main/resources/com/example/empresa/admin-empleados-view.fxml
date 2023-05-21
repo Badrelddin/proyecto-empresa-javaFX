@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.empresa.AdminEmpleadosController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.empresa.AdminEmpleadosController">
 <children>
     <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="850.0">
         <menus>
@@ -29,7 +30,7 @@
             </Menu>
         </menus>
     </MenuBar>
-      <TableView fx:id="tbEmpleados" layoutX="110.0" layoutY="192.0" prefHeight="241.0" prefWidth="615.0">
+      <TableView fx:id="tbEmpleados" layoutX="110.0" layoutY="231.0" prefHeight="241.0" prefWidth="615.0">
         <columns>
           <TableColumn fx:id="colID" prefWidth="43.0" text="ID" />
           <TableColumn fx:id="colNombre" prefWidth="88.0" text="Nombre" />
@@ -44,27 +45,37 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <Button layoutX="699.0" layoutY="488.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="73.0" text="Salir" textFill="#a12e2e">
+      <Button layoutX="725.0" layoutY="574.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="73.0" text="Salir" textFill="#a12e2e">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
       <Label fx:id="lbNombreyApellidos" layoutX="373.0" layoutY="126.0" text="Nombre y apellidos" />
-      <Button layoutX="373.0" layoutY="476.0" mnemonicParsing="false" onAction="#btEliminar" text="Eliminar" textFill="#dd4b4b">
+      <Button layoutX="477.0" layoutY="492.0" mnemonicParsing="false" onAction="#btEliminar" text="Eliminar" textFill="#dd4b4b">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button layoutX="269.0" layoutY="476.0" mnemonicParsing="false" onAction="#btModificar" text="Modificar" textFill="#c6a038">
+      <Button layoutX="355.0" layoutY="492.0" mnemonicParsing="false" onAction="#btModificar" text="Modificar" textFill="#c6a038">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button layoutX="156.0" layoutY="476.0" mnemonicParsing="false" onAction="#btAlta" text="Dar de alta" textFill="#688554">
+      <Button layoutX="230.0" layoutY="492.0" mnemonicParsing="false" onAction="#btAlta" text="Dar de alta" textFill="#688554">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
+      <Button layoutX="362.0" layoutY="167.0" mnemonicParsing="false" onAction="#btnActualizar" text="Actualizar tabla">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@refreshtwocounterclockwisecirculararrowsinterfacesymbol_79835.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Separator layoutY="554.0" prefHeight="0.0" prefWidth="850.0" />
 </children>
 
 </Pane>

@@ -14,9 +14,14 @@ class Equipo {
         this.miembro_del_equipo = miembro_del_equipo
     }
 
+
+    fun prueba():String{
+        return "Equipo(id=$id, nombre='$nombre', miembro_del_equipo='$miembro_del_equipo')"
+
+    }
+
     override fun toString(): String {
         return "$nombre"
     }
-
 
 }

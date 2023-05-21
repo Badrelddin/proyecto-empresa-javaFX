@@ -2,6 +2,7 @@ package model.empleado
 
 import model.ConexionDB
 import model.Constantes
+import model.equipo.Equipo
 import java.sql.PreparedStatement
 import java.sql.SQLException
 import java.text.SimpleDateFormat
@@ -13,7 +14,7 @@ class EmpleadoDAOImpl : EmpleadoDAO {
     var conexion = ConexionDB(Constantes.url, Constantes.user, Constantes.password)
     override fun login(email: String, password: String): Boolean {
         conexion.conectar()
-        val query = "SELECT * FROM empleado WHERE email = ?"
+        val query = "SELECT * FROM empleado WHERE email = ? and password = ?"
         val ps = conexion.getPreparedStatement(query)
 
         var Empleado: Empleado? = null
@@ -22,6 +23,8 @@ class EmpleadoDAOImpl : EmpleadoDAO {
 
         try {
             ps?.setString(1, email)
+            ps?.setString(2, password)
+
             val rs = ps?.executeQuery()
             if (rs?.next() == true) {
                 Empleado =
@@ -43,33 +46,6 @@ class EmpleadoDAOImpl : EmpleadoDAO {
         }
     }
 
-    override fun esJefe(email: String): Boolean {
-        conexion.conectar()
-        val query = "SELECT * FROM empleado WHERE email = ?"
-        val ps = conexion.getPreparedStatement(query)
-
-        var Empleado: Empleado? = null
-        try {
-            ps?.setString(1, email)
-            val rs = ps?.executeQuery()
-            if (rs?.next() == true) {
-                Empleado =
-                    Empleado(
-                        rs.getString("nombre"),
-                        rs.getString("apellidos"),
-                        rs.getString("email"),
-                        rs.getString("password"),
-                        rs.getString("fecha_nacimiento"),
-                        rs.getBoolean("es_jefe")
-                    )
-            }
-
-        } catch (e: Exception) {
-            println(e)
-        } finally {
-            return Empleado?.es_jefe!!
-        }
-    }
 
     override fun getEmpleadoByEmail(email: String): Empleado? {
         conexion.conectar()
@@ -83,12 +59,14 @@ class EmpleadoDAOImpl : EmpleadoDAO {
             if (rs?.next() == true) {
                 Empleado =
                     Empleado(
+                        rs.getInt("id"),
                         rs.getString("nombre"),
                         rs.getString("apellidos"),
                         rs.getString("email"),
                         rs.getString("password"),
                         rs.getString("fecha_nacimiento"),
-                        rs.getBoolean("es_jefe")
+                        rs.getBoolean("es_jefe"),
+                        rs.getInt("id_equipo")
                     )
             }
 
@@ -120,7 +98,8 @@ class EmpleadoDAOImpl : EmpleadoDAO {
                         rs.getString("email"),
                         rs.getString("password"),
                         rs.getString("fecha_nacimiento"),
-                        rs.getBoolean("es_jefe")
+                        rs.getBoolean("es_jefe"),
+                        rs.getInt("id_equipo")
                     )
                 arrEmpleados.add(Empleado)
             }
@@ -134,6 +113,40 @@ class EmpleadoDAOImpl : EmpleadoDAO {
         }
     }
 
+    override fun getEmpleadosByIdEquip(id: Int): List<Empleado> {
+        conexion.conectar()
+        val query = "SELECT * FROM empleado where id_equipo = ?"
+        val ps = conexion.getPreparedStatement(query)
+
+        var Empleado: Empleado? = null
+        var arrEmpleados = ArrayList<Empleado>()
+        try {
+            ps?.setInt(1,id)
+
+            val rs = ps?.executeQuery()
+            while (rs?.next() == true) {
+                Empleado =
+                    Empleado(
+                        rs.getInt("id"),
+                        rs.getString("nombre"),
+                        rs.getString("apellidos"),
+                        rs.getString("email"),
+                        rs.getString("password"),
+                        rs.getString("fecha_nacimiento"),
+                        rs.getBoolean("es_jefe"),
+                        rs.getInt("id_equipo")
+                    )
+                arrEmpleados.add(Empleado)
+            }
+
+        } catch (e: Exception) {
+            println(e.toString())
+        } finally {
+            ps?.close()
+            conexion.desconectar()
+            return arrEmpleados
+        }
+    }
     override fun insertEmpleado(Empleado: Empleado): Boolean {
         var result: Int? = null
         var ps: PreparedStatement? = null
@@ -155,10 +168,11 @@ class EmpleadoDAOImpl : EmpleadoDAO {
             ps?.setDate(5, sqlDate)
 
             ps?.setBoolean(6, Empleado.es_jefe)
+
             result = ps?.executeUpdate()
 
         } catch (e: SQLException) {
-            println(e.message)
+            println(e.toString())
         } finally {
             ps?.close()
             conexion.desconectar()
@@ -180,7 +194,7 @@ class EmpleadoDAOImpl : EmpleadoDAO {
             result = ps?.executeUpdate()
 
         } catch (e: SQLException) {
-            println(e.message)
+            println(e.toString())
         } finally {
             ps?.close()
             conexion.desconectar()

@@ -56,8 +56,13 @@ class singupController:Initializable {
             if (txPw.text == txtConfPw.text) {
 
                 var cash_jefe = false
-                if (radioNo.isSelected) cash_jefe = true
+
+                if (radioSi.isSelected){
+                    cash_jefe = true
+                }
+
                 println(txPw.text)
+                println(cash_jefe)
 
                 val selectedDate = datapicker.value
 
@@ -71,7 +76,10 @@ class singupController:Initializable {
                         datapicker.value.toString(),
                         cash_jefe
                     )
-                    if (empleadosServicio.darAlta(empleado)) {
+                    var equipo = cbEquipo.value
+                    println(equipo.prueba())
+
+                    if (empleadosServicio.darAlta(empleado, equipo )) {
                         constantesController.alertSuccess("Registrado correctamente")
                     } else {
                         constantesController.alertError("No se ha podido dar de alta")
@@ -92,6 +100,8 @@ class singupController:Initializable {
 
     @FXML
     private lateinit var obsLista: ObservableList<Equipo>
+
+
     override fun initialize(location: URL?, resources: ResourceBundle?) {
 
         var equipo = EquipoServicio()

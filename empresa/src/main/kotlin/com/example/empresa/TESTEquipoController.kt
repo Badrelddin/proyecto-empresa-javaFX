@@ -51,7 +51,8 @@ class TESTEquipoController {
 
             lateinit var obsLista: ObservableList<Empleado>
 
-            obsLista.add(Empleado("Nadie", 0))
+           // obsLista.add(Empleado("Nadie", 0))
+
             obsLista = FXCollections.observableArrayList<Empleado>(lista)
             cbEquipo.items = obsLista
 

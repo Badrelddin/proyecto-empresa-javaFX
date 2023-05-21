@@ -111,5 +111,33 @@ class ConstantesController {
         stage.showAndWait()
     }
 
+    fun viewTraspasoEmpleadoTestEquipo(View:String, Empleado:Empleado){
+        val loader = FXMLLoader(javaClass.getResource(View))
+        val root = loader.load<Parent>()
+        val detailController = loader.getController<TESTEquipoController>()
+
+        detailController.inicializar(Empleado)
+
+        val stage = Stage()
+        stage.initModality(Modality.APPLICATION_MODAL)
+        stage.scene = Scene(root)
+
+        stage.showAndWait()
+    }
+
+    fun viewTraspasoEmpleadoTestLiderazgo(View:String, Empleado:Empleado){
+        val loader = FXMLLoader(javaClass.getResource(View))
+        val root = loader.load<Parent>()
+        val detailController = loader.getController<TESTLiderazgoController>()
+
+        detailController.inicializar(Empleado)
+
+        val stage = Stage()
+        stage.initModality(Modality.APPLICATION_MODAL)
+        stage.scene = Scene(root)
+
+        stage.showAndWait()
+    }
+
 
 }

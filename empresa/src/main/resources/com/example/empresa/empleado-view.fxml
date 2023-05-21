@@ -11,8 +11,8 @@
                 <Menu mnemonicParsing="false" text="Test">
                     <items>
                         <MenuItem mnemonicParsing="false" text="Anímico"/>
-                        <MenuItem mnemonicParsing="false" text="Equipo"/>
-                        <MenuItem mnemonicParsing="false" text="Jefe"/>
+                        <MenuItem mnemonicParsing="false" onAction="#testEquipo" text="Equipo"/>
+                        <MenuItem mnemonicParsing="false" onAction="#testLider" text="Jefe"/>
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Cambiar">

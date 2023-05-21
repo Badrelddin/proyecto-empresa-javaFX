@@ -94,11 +94,11 @@ class AdminEmpleadosController : Initializable {
                     tbEmpleados.items.remove(personaSeleccionada)
                     if (EmpleadosServicio.eliminar(personaSeleccionada.id)) {
                         ConstantesController.alertSuccess("Usuario eliminado correctamente")
-                    }else{
+                    } else {
                         ConstantesController.alertError("El usuario: ${personaSeleccionada.nombre} ${personaSeleccionada.apellidos} no ha podiso ser eliminado")
 
                     }
-                    tbEmpleados.refresh() //actualiza la tabla, en este caso no se necesita, pero por si acaso
+                    tbEmpleados.refresh()
                 }
 
             }
@@ -126,6 +126,17 @@ class AdminEmpleadosController : Initializable {
         } catch (e: Exception) {
             constantesController.alertError(e.toString())
         }
+    }
+
+    fun btnActualizar() {
+
+        obLista.removeAll()
+        obLista = FXCollections.observableArrayList()
+        for (i in empleadoServicio.selecionarEmpleados()) {
+            obLista.add(i)
+        }
+        tbEmpleados.items = obLista
+
     }
 
 

@@ -2,6 +2,8 @@ package service
 
 import model.empleado.Empleado
 import model.empleado.EmpleadoDAOImpl
+import model.equipo.Equipo
+import model.equipo.EquipoDAOImpl
 import model.user.UserDAOImpl
 
 class EmpleadosServicio {
@@ -20,16 +22,27 @@ class EmpleadosServicio {
     }
 
     fun esJefe(email:String):Boolean{
-        return emple.esJefe(email)
+        return emple.getEmpleadoByEmail(email)!!.es_jefe
     }
 
     fun searchEmpleado(email:String): Empleado? {
         return emple.getEmpleadoByEmail(email)
     }
 
-    fun darAlta(empleado: Empleado):Boolean{
-        return emple.insertEmpleado(empleado)
+    fun darAlta(empleado: Empleado, equipo: Equipo):Boolean{
+
+        //REFACTORIZAR EN SERVICIO
+        var equipoDAOImpl = EquipoDAOImpl()
+        equipoDAOImpl.insertEquipo(equipo)
+        return (emple.insertEmpleado(empleado))
+
     }
+
+
+    fun obtenerEmpleadosPorId(Id: Int):List<Empleado>{
+        return emple.getEmpleadosByIdEquip(Id)
+    }
+
 
 
 

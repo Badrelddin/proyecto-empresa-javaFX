@@ -1,14 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.empresa.EquipoController"
-            prefHeight="400.0" prefWidth="600.0">
+<Pane prefHeight="614.0" prefWidth="728.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.empresa.EquipoController">
 
-</AnchorPane>
+    <children>
+        <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="728.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="Test">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Anímico" />
+                        <MenuItem mnemonicParsing="false" onAction="#testEquipo" text="Equipo" />
+                        <MenuItem mnemonicParsing="false" text="Jefe" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Cambiar">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Nombre" />
+                        <MenuItem mnemonicParsing="false" text="Apellidos" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Mostrar">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Empleados" />
+                        <MenuItem mnemonicParsing="false" text="Equipos" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+      <Button layoutX="652.0" layoutY="551.0" mnemonicParsing="false" text="Salir" textFill="#f22b2b">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Separator layoutX="-3.0" layoutY="534.0" prefHeight="3.0" prefWidth="728.0" />
+      <Button layoutX="222.0" layoutY="484.0" mnemonicParsing="false" text="Agregar" />
+      <Button layoutX="331.0" layoutY="484.0" mnemonicParsing="false" text="Modificar" />
+      <Button layoutX="422.0" layoutY="484.0" mnemonicParsing="false" text="Eliminar" />
+      <TableView layoutX="145.0" layoutY="237.0" prefHeight="200.0" prefWidth="439.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="ID" />
+          <TableColumn prefWidth="144.0" text="Nombre" />
+            <TableColumn prefWidth="219.0" text="Miembro" />
+        </columns>
+      </TableView>
+      <Label layoutX="316.0" layoutY="129.0" text="Nombreyapellidos" />
+      <Label layoutX="207.0" layoutY="66.0" text="Panel de administracion de equipos">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+    </children>
+
+</Pane>

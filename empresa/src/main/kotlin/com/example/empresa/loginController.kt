@@ -31,7 +31,7 @@ class loginController {
             var empleado = EempleadosServicio.searchEmpleado(email)!!
             if (EempleadosServicio.esJefe(email)) {
                 try {
-                    constantesController.viewTraspasoAdmin("admin-view.fxml", empleado)
+                   constantesController.viewTraspasoAdmin("admin-view.fxml", empleado)
 
                 } catch (e: Exception) {
                     constantesController.alertError(e.toString())
