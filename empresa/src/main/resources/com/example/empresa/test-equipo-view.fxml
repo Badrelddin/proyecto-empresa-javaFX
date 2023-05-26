@@ -4,75 +4,79 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane prefHeight="527.0" prefWidth="772.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.empresa.TESTEquipoController">
+<Pane prefHeight="527.0" prefWidth="772.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.empresa.TESTEquipoController">
     <children>
         <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="772.0">
             <menus>
                 <Menu mnemonicParsing="false" text="Test">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Anímico" />
-                        <MenuItem mnemonicParsing="false" text="Equipo" />
-                        <MenuItem mnemonicParsing="false" text="Jefe" />
+                        <MenuItem mnemonicParsing="false" text="Anímico"/>
+                        <MenuItem mnemonicParsing="false" text="Equipo"/>
+                        <MenuItem mnemonicParsing="false" text="Jefe"/>
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Cambiar">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Nombre" />
-                        <MenuItem mnemonicParsing="false" text="Apellidos" />
+                        <MenuItem mnemonicParsing="false" text="Nombre"/>
+                        <MenuItem mnemonicParsing="false" text="Apellidos"/>
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Mostrar">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Empleados" />
-                        <MenuItem mnemonicParsing="false" text="Equipos" />
+                        <MenuItem mnemonicParsing="false" text="Empleados"/>
+                        <MenuItem mnemonicParsing="false" text="Equipos"/>
                     </items>
                 </Menu>
             </menus>
         </MenuBar>
         <Label layoutX="304.0" layoutY="65.0" text="Test de Equipo">
             <font>
-                <Font size="25.0" />
+                <Font size="25.0"/>
             </font>
         </Label>
         <Label layoutX="205.0" layoutY="192.0" text="¿Comoel ambiente que ha tenido el equipo en esa semana?">
             <font>
-                <Font size="15.0" />
+                <Font size="15.0"/>
             </font>
         </Label>
-        <RadioButton fx:id="rdBien" layoutX="265.0" layoutY="227.0" mnemonicParsing="false" text="Bien" textFill="#479724">
+        <RadioButton fx:id="rdBien" layoutX="265.0" layoutY="227.0" mnemonicParsing="false" text="Bien"
+                     textFill="#479724">
             <toggleGroup>
-                <ToggleGroup fx:id="testEquipo" />
+                <ToggleGroup fx:id="testEquipo"/>
             </toggleGroup>
             <font>
-                <Font size="13.0" />
+                <Font size="13.0"/>
             </font>
         </RadioButton>
-        <RadioButton fx:id="rdRegular" layoutX="352.0" layoutY="227.0" mnemonicParsing="false" text="Regular" textFill="#c39228" toggleGroup="$testEquipo">
+        <RadioButton fx:id="rdRegular" layoutX="352.0" layoutY="227.0" mnemonicParsing="false" text="Regular"
+                     textFill="#c39228" toggleGroup="$testEquipo">
             <font>
-                <Font size="13.0" />
+                <Font size="13.0"/>
             </font>
         </RadioButton>
-        <RadioButton fx:id="rdMal" layoutX="445.0" layoutY="227.0" mnemonicParsing="false" text="Mal" textFill="#bf3a3a" toggleGroup="$testEquipo">
+        <RadioButton fx:id="rdMal" layoutX="445.0" layoutY="227.0" mnemonicParsing="false" text="Mal" textFill="#bf3a3a"
+                     toggleGroup="$testEquipo">
             <font>
-                <Font size="13.0" />
+                <Font size="13.0"/>
             </font>
         </RadioButton>
         <Label layoutX="301.0" layoutY="303.0" text="¿Quien le sobra en el equipo?">
             <font>
-                <Font size="13.0" />
+                <Font size="13.0"/>
             </font>
         </Label>
-        <ComboBox fx:id="cbEquipo" layoutX="307.0" layoutY="338.0" prefHeight="30.0" prefWidth="157.0" />
+        <ComboBox fx:id="cbEquipo" layoutX="307.0" layoutY="338.0" prefHeight="30.0" prefWidth="157.0"/>
         <Button layoutX="337.0" layoutY="471.0" mnemonicParsing="false" onAction="#btnSend" text="Enviar datos ">
             <font>
-                <Font size="14.0" />
+                <Font size="14.0"/>
             </font>
         </Button>
         <Label fx:id="lbNombreyApellidos" layoutX="339.0" layoutY="123.0" text="lbNombreyApellidos">
             <font>
-                <Font size="14.0" />
+                <Font size="14.0"/>
             </font>
         </Label>
-      <Separator layoutY="449.0" prefHeight="2.0" prefWidth="772.0" />
+        <Separator layoutY="449.0" prefHeight="2.0" prefWidth="772.0"/>
     </children>
 </Pane>

@@ -61,8 +61,6 @@ class singupController:Initializable {
                     cash_jefe = true
                 }
 
-                println(txPw.text)
-                println(cash_jefe)
 
                 val selectedDate = datapicker.value
 
@@ -77,6 +75,7 @@ class singupController:Initializable {
                         cash_jefe
                     )
                     var equipo = cbEquipo.value
+
                     println(equipo.prueba())
 
                     if (empleadosServicio.darAlta(empleado, equipo )) {
@@ -106,6 +105,11 @@ class singupController:Initializable {
 
         var equipo = EquipoServicio()
         var lista = equipo.verEquipo()
+
+        for (i in lista){
+            println(i.prueba())
+        }
+
         obsLista = FXCollections.observableArrayList<Equipo>(lista)
         cbEquipo.items = obsLista
     }

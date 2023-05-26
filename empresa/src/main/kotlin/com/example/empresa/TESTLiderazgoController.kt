@@ -19,6 +19,8 @@ import service.EmpleadosServicio
 class TESTLiderazgoController {
 
 
+    constructor()
+
     @FXML
     private lateinit var pbLider: ProgressBar
 
@@ -64,6 +66,7 @@ class TESTLiderazgoController {
     }
 
     var empleado = Empleado()
+
     fun inicializar(empleado: Empleado){
         this.empleado = empleado
         lbNombreyApellidos.text = empleado.ObtenerNombreyApellidos()

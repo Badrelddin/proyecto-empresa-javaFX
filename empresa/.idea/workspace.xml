@@ -4,38 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="697beb74-98f5-44ff-9675-55d97836de90" name="Changes" comment="create and add functions for view and controller TestEquipo">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/TESTLiderazgoController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/EmpleadoEquipo/EmpleadoEquipo.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/EmpleadoEquipo/EmpleadoEquipoDAO.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/EmpleadoEquipo/EmpleadoEquipoDAOImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/Ficheros/Ficheros.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/service/EmpleadoEquipoServicio.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/empresa/test-liderzargo-view.fxml" afterDir="false" />
+    <list default="true" id="697beb74-98f5-44ff-9675-55d97836de90" name="Changes" comment="fix insert testEquipo">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/test.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/empresa/test.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/AdminEmpleadoModificarController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/AdminEmpleadoModificarController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/AdminEmpleadosController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/AdminEmpleadosController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/ConstantesController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/ConstantesController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/EquipoController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/EquipoController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/TESTEquipoController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/TESTEquipoController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/TESTLiderazgoController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/TESTLiderazgoController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/empleadoController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/empleadoController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/loginController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/loginController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/singupController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/empresa/singupController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/empleado/Empleado.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/empleado/Empleado.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/empleado/EmpleadoDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/empleado/EmpleadoDAO.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/empleado/EmpleadoDAOImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/empleado/EmpleadoDAOImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/equipo/EquipoDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/equipo/EquipoDAO.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/equipo/Equipo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/equipo/Equipo.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/equipo/EquipoDAOImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/equipo/EquipoDAOImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/test/Test.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/test/TestDAO.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/test/TestDAOImpl.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/testEquipo/testEquipo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/testEquipo/testEquipo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/testEquipo/testEquipoDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/testEquipo/testEquipoDAO.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/testEquipo/testEquipoDAOImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/testEquipo/testEquipoDAOImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/service/EmpleadosServicio.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/service/EmpleadosServicio.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/empresa/admin-empleados-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/empresa/admin-empleados-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/empresa/empleado-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/empresa/empleado-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/empresa/equipo-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/empresa/equipo-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/empresa/signup-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/empresa/signup-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/empresa/test-equipo-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/empresa/test-equipo-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/empresa/test-liderzargo-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/empresa/test-lider-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Kotlin Interface" />
+        <option value="FxmlFile" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -74,7 +55,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/win11/Escritorio/mysql-connector-j-8.0.32/mysql-connector-j-8.0.32.jar&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Badr/Desktop/mysql-connector-j-8.0.32-20230222T123831Z-001/mysql-connector-j-8.0.32/mysql-connector-j-8.0.32.jar&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -122,6 +103,8 @@
       <workItem from="1684320418677" duration="7500000" />
       <workItem from="1684352529171" duration="6226000" />
       <workItem from="1684601702054" duration="38470000" />
+      <workItem from="1684705873941" duration="6085000" />
+      <workItem from="1684754121341" duration="2858000" />
     </task>
     <task id="LOCAL-00001" summary="fix db">
       <created>1684258184657</created>
@@ -270,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684694488246</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="fix insert testEquipo">
+      <created>1684706325455</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1684706325455</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,7 +297,8 @@
     <MESSAGE value="add and implment preguntas class for service and DAO" />
     <MESSAGE value="re-design DB" />
     <MESSAGE value="create and add functions for view and controller TestEquipo" />
-    <option name="LAST_COMMIT_MESSAGE" value="create and add functions for view and controller TestEquipo" />
+    <MESSAGE value="fix insert testEquipo" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix insert testEquipo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

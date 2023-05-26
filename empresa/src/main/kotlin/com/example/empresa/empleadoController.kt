@@ -1,7 +1,12 @@
 package com.example.empresa
 
 import javafx.fxml.FXML
+import javafx.fxml.FXMLLoader
+import javafx.scene.Parent
+import javafx.scene.Scene
 import javafx.scene.control.Label
+import javafx.stage.Modality
+import javafx.stage.Stage
 import model.empleado.Empleado
 
 
@@ -37,8 +42,20 @@ class empleadoController {
 
     fun testLider(){
         try {
-            constantesController.viewTraspasoEmpleadoTestLiderazgo("test-liderazgo-view.fxml", empleado)
+           // constantesController.viewTraspasoEmpleadoTestLiderazgo("test.fxml", empleado)
+            val loader = FXMLLoader(javaClass.getResource("test.fxml"))
+            val root = loader.load<Parent>()
+            /*val detailController = loader.getController<TESTLiderazgoController>()
+
+            detailController.inicializar(Empleado)*/
+
+            val stage = Stage()
+            stage.initModality(Modality.APPLICATION_MODAL)
+            stage.scene = Scene(root)
+
+            stage.showAndWait()
         }catch (e:Exception){
+            println(e.toString())
             constantesController.alertError(e.toString())
         }
     }

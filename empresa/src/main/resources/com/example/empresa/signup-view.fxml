@@ -4,89 +4,94 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="677.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.empresa.singupController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0"
+      prefWidth="677.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.empresa.singupController">
     <children>
         <Button layoutX="409.0" layoutY="597.0" mnemonicParsing="false" onAction="#signup" text="Registrarse">
-         <font>
-            <Font size="15.0" />
-         </font></Button>
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Button>
         <Label layoutX="188.0" layoutY="52.0" text="Registro de usuario">
-         <font>
-            <Font size="25.0" />
-         </font></Label>
-      <Button layoutX="306.0" layoutY="597.0" mnemonicParsing="false" text="Cancelar" textFill="RED">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Button>
-      <TextField fx:id="txApellidos" layoutX="369.0" layoutY="176.0">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="txNombre" layoutX="91.0" layoutY="176.0">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="exEmail" layoutX="91.0" layoutY="263.0" prefHeight="30.0" prefWidth="277.0">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </TextField>
-      <PasswordField fx:id="txPw" layoutX="93.0" layoutY="348.0" prefHeight="30.0" prefWidth="191.0">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </PasswordField>
-      <PasswordField fx:id="txtConfPw" layoutX="370.0" layoutY="348.0">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </PasswordField>
-      <DatePicker fx:id="datapicker" layoutX="88.0" layoutY="437.0" prefHeight="36.0" prefWidth="202.0" />
-      <Label layoutX="91.0" layoutY="147.0" text="Nombre">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="368.0" layoutY="147.0" text="Apellidos">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="91.0" layoutY="232.0" text="E-mail">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="95.0" layoutY="319.0" text="Contraseña">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="369.0" layoutY="319.0" text="Confirmación de contraseña">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="88.0" layoutY="405.0" text="Fecha de nacimiento">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <ComboBox fx:id="cbEquipo" layoutX="383.0" layoutY="437.0" prefHeight="31.0" prefWidth="162.0" />
-      <Label layoutX="383.0" layoutY="407.0" text="Equipo de trabajo">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <RadioButton fx:id="radioSi" layoutX="145.0" layoutY="545.0" mnemonicParsing="false" text="Si">
-         <toggleGroup>
-            <ToggleGroup fx:id="es_jefe" />
-         </toggleGroup>
-      </RadioButton>
-      <RadioButton fx:id="radioNo" layoutX="188.0" layoutY="545.0" mnemonicParsing="false" selected="true" text="No" toggleGroup="$es_jefe" />
-      <Label layoutX="118.0" layoutY="511.0" text="¿Este usuario será administrador?" />
+            <font>
+                <Font size="25.0"/>
+            </font>
+        </Label>
+        <Button layoutX="306.0" layoutY="597.0" mnemonicParsing="false" text="Cancelar" textFill="RED">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Button>
+        <TextField fx:id="txApellidos" layoutX="369.0" layoutY="176.0">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="txNombre" layoutX="91.0" layoutY="176.0">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="exEmail" layoutX="91.0" layoutY="263.0" prefHeight="30.0" prefWidth="277.0">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </TextField>
+        <PasswordField fx:id="txPw" layoutX="93.0" layoutY="348.0" prefHeight="30.0" prefWidth="191.0">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </PasswordField>
+        <PasswordField fx:id="txtConfPw" layoutX="370.0" layoutY="348.0">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </PasswordField>
+        <DatePicker fx:id="datapicker" layoutX="88.0" layoutY="437.0" prefHeight="36.0" prefWidth="202.0"/>
+        <Label layoutX="91.0" layoutY="147.0" text="Nombre">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="368.0" layoutY="147.0" text="Apellidos">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="91.0" layoutY="232.0" text="E-mail">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="95.0" layoutY="319.0" text="Contraseña">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="369.0" layoutY="319.0" text="Confirmación de contraseña">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="88.0" layoutY="405.0" text="Fecha de nacimiento">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <ComboBox fx:id="cbEquipo" layoutX="383.0" layoutY="437.0" prefHeight="31.0" prefWidth="162.0"/>
+        <Label layoutX="383.0" layoutY="407.0" text="Equipo de trabajo">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <RadioButton fx:id="radioSi" layoutX="145.0" layoutY="545.0" mnemonicParsing="false" text="Si">
+            <toggleGroup>
+                <ToggleGroup fx:id="es_jefe"/>
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="radioNo" layoutX="188.0" layoutY="545.0" mnemonicParsing="false" selected="true" text="No"
+                     toggleGroup="$es_jefe"/>
+        <Label layoutX="118.0" layoutY="511.0" text="¿Este usuario será administrador?"/>
     </children>
 </Pane>

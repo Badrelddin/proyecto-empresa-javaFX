@@ -15,7 +15,7 @@ class EquipoDAOImpl : EquipoDAO {
 
     override fun getEquipos(): List<Equipo> {
         conexion.conectar()
-        val query = "SELECT * FROM equipo"
+        val query = "SELECT distinct nombre FROM equipo"
         val ps = conexion.getPreparedStatement(query)
 
         var Equipo: Equipo? = null
@@ -25,9 +25,7 @@ class EquipoDAOImpl : EquipoDAO {
             while (rs?.next() == true) {
                 Equipo =
                     Equipo(
-                        rs.getInt("id"),
-                        rs.getString("nombre"),
-                        rs.getString("miembro_del_equipo")
+                        rs.getString("nombre")
                     )
                 arrEquipo.add(Equipo)
             }

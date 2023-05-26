@@ -14,6 +14,10 @@ class Equipo {
         this.miembro_del_equipo = miembro_del_equipo
     }
 
+    constructor(nombre:String ){
+        this.nombre = nombre
+
+    }
 
     fun prueba():String{
         return "Equipo(id=$id, nombre='$nombre', miembro_del_equipo='$miembro_del_equipo')"
